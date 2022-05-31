@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand';
+    box-sizing: border-box
+}
+body{
+    background-color: #12b5d4;
+}
+#menu{
+    font-size: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #65d5d7;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu ul{
+    display: flex;
+    list-style-type: none;
+}
+#menu li{
+    margin: 0;
+    padding: 37px 37px;;
+}
+@keyframes seleccion{
+    from {background-color: #65d5d7;}
+    to {background-color: #12b5d4;}
+}
+#menu li:hover{
+    animation-name: seleccion;
+    animation-duration: 1.25s;
+}
+#blanco{
+    height: 115px;
+}
+#desc{
+    padding-top: 170px;
+    margin-left: 42px;
+    font-size: 20px;
+}
+.descr{
+    margin-left: 42px;
+    font-size: 20px;
+}
+.descr>a{
+    font-size: 20px;
+    color: white;
+}
+#Videos>div{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 25px;
+}
+#Videos>div>div{
+    width: 580px;
+    height: 315px;
+}
+h2{
+    font-size: 30px;
+    padding-top: 125px;
+}
+
+#logo{
+    order: -1;
+}
+header{
+    justify-self: left;
+}
+nav{
+    justify-self: flex-end;
+    font-family: 'Patrick Hand';
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+#Musica>h2,p{
+    margin-left: 42px;
+}
+#Musica>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+#Productos{
+    margin-left: 42px;
+    margin-right: 42px;
+}
+#Contacto{
+    margin-left: 42px;
+    margin-bottom: 200px;
+}
+form{
+    font-size: 20px;
+}
+#formu{
+    width: 450px;
+    border: 2px solid black;
+    padding: 10px;
+}
+#formu input,#formu textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 47, 65);
+    background-color: cornsilk;
+}
+#formu label{
+    display: block;
+    margin-bottom: 10px;
+}
+#formu textarea{
+    /* evita el boton de modificar el area */
+    resize: none;
+}
+#formu input[type=submit]{
+    border: 0;
+    background-color: rgb(0, 47, 65);
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+*{
+    box-sizing: border-box;
+}
+#formu input[type=checkbox],#formu input[type=checkbox] + label{
+    display: inline-block;
+    width: auto;
+}
+footer{
+    background-color: rgb(0, 47, 65);
+    text-align: center;
+}
+footer h2{
+    color: #65d5d7;
+    padding: 10px;
+}
+@media (max-width: 1000px){
+    h2{
+        margin-left: 10px;
+    }
+    #menu{
+        width: 100%;
+        justify-content: space-between;
+    }
+    #menu h1{
+        font-size: 30px;
+        width: 150px;
+        padding: 0;
+        margin: 0 10px;
+    }
+    #menu ul{
+        padding: 0;
+        margin: 0;
+    }
+    #menu li{
+        align-content: center;
+        width: 15%;
+        padding: 45px 100px 30px 0;
+        margin: 0;
+    }
+    #menu a{
+        font-size: 25px;
+    }
+    #Videos>div{
+        flex-direction: column;
+    }
+    #Videos>div>div{
+        width: 75%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top: 35px;
+    }
+    #desc{
+        padding-top: 300px;
+        margin-left: 10px;
+    }
+    .descr{
+        margin-left: 10px;
+    }
+    #Musica>div{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #Musica h2,#Musica p{
+        margin-left: 10px;
+    }
+    #Productos{
+        margin: 0;
+    }
+    #Contacto{
+        margin: 15%;
+    }
+    
+}
+@media (max-width: 625px) {
+    h2{
+        margin-left: 10px;
+        padding-top: 300px;
+    }
+    #menu{
+        height: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
+    }
+    #menu ul{
+        align-content: space-between;
+        flex-wrap: wrap;
+        background-color: rgb(0, 47, 65);
+    }
+    #menu li{
+        text-align: left;
+        margin-left: 25px;
+        width: 20%;
+    }
+    #menu a{
+        color: #12b5d4;
+    }
+    #Videos>div{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        padding-top: 0px;
+    }
+    #Videos>div>div{
+        width: 100%;
+        height: 400px;
+        padding-bottom: 50px;
+        margin-left: 0px;
+    }
+    #desc{
+        padding-top: 300px;
+        margin-left: 10px;
+    }
+    .descr{
+        margin-left: 10px;
+    }
+    #Musica>div{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    #Musica h2,#Musica p{
+        margin-left: 10px;
+    }
+    #Productos{
+        margin: 0;
+    }
+    #Contacto{
+        margin: 8%;
+    }
+    #menu li:hover{
+        animation-name: nada;
+        animation-duration: 1.25s;
+    }
+}

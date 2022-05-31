@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>El Show de Mister Trapo</title>
+    <link rel="shortcut icon" href="imagenes/favicon-16x16.png" type="image/x-icon">
+</head>
+<body>
+    <nav id="menu">
+    <header>
+        <h1>El show de Mister Trapo</h1>
+    </header>
+    <a href="#" id="logo">
+        <img src="imagenes/51IMt7w5IuL._UXNaN_FMjpg_QL85_.jpg" alt="Logo show de mister trapo" height="120px">
+    </a>
+    <ul>
+        <li>
+            <a href="#Videos">
+                Videos
+            </a>
+        </li>
+        <li>
+            <a href="#Musica">
+                Música
+            </a>
+        </li>
+        <li>
+            <a href="#Productos">
+                Productos
+            </a>
+        </li>
+        <li>
+            <a href="#Contacto">
+                Contacto
+            </a>
+        </li>
+    </ul>
+    </nav>
+    <div id="blanco">
+    </div>
+    <img src="imagenes/portada.png" alt="portada" width="100%">
+    <section id="Videos">
+        <div>
+            <div id="capitulos">
+                <h2>Todos los Episodios</h2>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PLQk3kb04VpBXhmtIX-Li_nzT7vzntw4ZH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="canciones">
+                <h2>Videos Musicales</h2>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PLQk3kb04VpBX13Mu_1q7Y-rnj6SG12GMD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        </section>
+        <p id="desc">
+            En esta sección podrás disfrutar de todos los capítulos del show de mister trapo, dóndo aprenderás como divertirte mientras ayudas a mami y papi con las tareas de la casa. también puedes ver los videos musicales que aparcen en tus episodios favoritos.
+        </p>
+    <section id="Musica">
+        <h2>Escucha nuestros temas</h2>
+        <div>
+            <div id="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5tvJ2JyGwfsWtZFiEDUMlm?utm_source=generator" width="595px" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <div id="artista">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2e9gUm9wRxxyCq0kuphY8P?utm_source=generator&theme=0" width="595px" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+        <p class="descr">
+            Aquí podrás escuchar toda la música del Show de Mister Trapo en su respetivo orden, o escuchar las canciones más populares para estar bien a la moda.
+        </p>
+    </section>
+    <section id="Productos">
+        <h2>Productos</h2>
+        <a href="https://mistertrapo.com.ar/catalogo-mistertrapo.pdf" target="_blank"><img src="imagenes/product.png" alt="Foto de los personajes de mister trapo" width="100%"></a>
+    </section>
+    <p class="descr">En esta sección podrás tener a la Mister Tropa en tu propia casa, todos los productos los puedes encontrar en tu supermercado favorito. Para conocerlos todos puedes hacer click en la imagen de arriba o <a href="https://mistertrapo.com.ar/catalogo-mistertrapo.pdf">aquí</a></p>
+    <section id="Contacto">
+        <h2>Contacto</h2>
+        <form action="" name="formu" id="formu">
+            <label>
+                Nombre y apellido:
+                <input type="text" name="nombre" placeholder="Tu nombre">
+            </label>
+            <label>
+                Telefono:
+                <input type="tel" name="tel" placeholder="Tu teléfono">
+            </label>
+            <label>
+                Correo:
+                <input type="email" name="mail" placeholder="Tu email">
+            </label>
+            <label>
+                Motivo de Consulta:
+                <select name="motivo" id="motivo">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="productos">Productos</option>
+                    <option value="programa">Programa</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </label>
+            <label>
+                Mensaje:
+                <textarea cols="30" rows="10" name="mensaje" placeholder="Escribe aqui tu mensaje"></textarea>
+            </label>
+            <input type="checkbox" id="suscri">
+            <label for="suscri">
+                Suscribirse a novedades
+            </label>
+            <input type="submit" value="Enviar" onclick="validarEnvio()">
+        </form>
+        <script>
+            function validarEnvio() {
+                if (document.formu.nombre.value.length == 0) {
+                    alert("Tienes que escribir tu nombre")
+                    document.formu.nombre.focus()
+                    return 0;
+                }
+    
+                telef = document.formu.tel.value
+                telef = validarEntero(telef)
+                document.formu.tel.value = telef
+                if (telef == "") {
+                    alert("Se requiere número de teléfono.")
+                    document.formu.tel.focus()
+                    return 0;
+                } else {
+                    if (telef < 10000000) {
+                        alert("Debe ser un teléfono válido.")
+                        document.formu.tel.focus()
+                        return 0;
+                    }
+                }
+
+                if (document.formu.mail.value.length == 0) {
+                    alert("Necesitamos tu correo")
+                    document.formu.mail.focus()
+                    return 0;
+                }
+    
+                if (document.formu.motivo.selectedIndex == 0) {
+                    alert("Debe seleccionar un motivo de consulta.")
+                    document.formu.motivo.focus()
+                    return 0;
+                }
+                if (document.formu.mensaje.value.length == 0) {
+                    alert("No nos has dicho tu consulta")
+                    document.formu.mensaje.focus()
+                    return 0;
+                }
+                alert("Muchas gracias por contactarte");
+                document.formu.submit();
+            }
+    
+            function validarEntero(val) {
+                val = parseInt(val)
+                if (isNaN(val)) {
+                    return ""
+                } else {
+                    return val
+                }
+            }
+        </script>
+    </section>
+    <footer>
+        <h2>Redes Sociales</h2>
+        <a href="https://www.youtube.com/channel/UCIbIgcDkZ8tLnN8oi58njoA" target="_blank">
+            <i class='bx bxl-youtube bx-lg' style='color:#ff0000'  ></i>
+        </a>
+        <a href="https://open.spotify.com/artist/2e9gUm9wRxxyCq0kuphY8P?si=-MGZxfxnSnaui09lZ3Oldw&utm_source=whatsapp&nd=1" target="_blank">
+            <i class='bx bxl-spotify bx-lg' undefined ></i>
+        </a>
+        <a href="https://www.instagram.com/elshowdemistertrapo/" target="_blank">
+            <i class='bx bxl-instagram-alt bx-lg' style='color:#ffa035'  ></i></a>
+        </a>
+    </footer>
+</body>
+</html>
